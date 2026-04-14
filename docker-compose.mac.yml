@@ -1,0 +1,16 @@
+# docker-compose.mac.yml
+services:
+  nginx:
+    volumes:
+      - ./nginx/nginx-mac.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - "80:80"
+  api:
+    ports:
+      - "4000:4000"
+  postgres:
+    ports:
+      - "5432:5432"
+  redis:
+    ports:
+      - "6379:6379"
